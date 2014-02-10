@@ -10,6 +10,9 @@ class Pizza
     end
   end
 
+  def is_veggie
+    @toppings.all? {|topping| topping.vegetarian}
+  end
 
 
 end
@@ -23,5 +26,7 @@ class Topping
     @name = name
     @vegetarian = vegetarian
   end
+
+
 
 end
