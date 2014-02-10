@@ -2,10 +2,12 @@ class Pizza
 
   attr_accessor :name, :toppings
 
-  def initialize(toppings = [])
-    @name = name
+  def initialize(toppings = nil)
     @toppings = toppings
-
+    if @toppings ==nil
+      @toppings = []
+      @toppings.push('cheese')
+    end
   end
 
 
