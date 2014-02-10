@@ -2,10 +2,13 @@ class Pizza
 
   attr_accessor :name, :toppings
 
-  def initialize(name)
+  def initialize(toppings = [])
     @name = name
-    @toppings = []
+    @toppings = toppings
+
   end
+
+
 
 end
 
@@ -18,4 +21,5 @@ class Topping
     @name = name
     @vegetarian = vegetarian
   end
+
 end

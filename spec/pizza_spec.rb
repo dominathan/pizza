@@ -35,7 +35,7 @@ describe Topping do
     end
   end
 
-  xit "exists" do
+  it "exists" do
     expect(Topping).to be_a(Class)
   end
 end
