@@ -27,7 +27,6 @@ describe Pizza do
         Topping.new('mushrooms', vegetarian = true),
         Topping.new('onions',vegetarian = true)]
       pizza = Pizza.new(toppings)
-
       #write method that checks if pizza called is_veggie
       expect(pizza.is_veggie).to eq(true)
 
@@ -36,6 +35,15 @@ describe Pizza do
         Topping.new('onion',vegetarian = true)]
         newpizza= Pizza.new(toppingnotveg)
         expect(newpizza.is_veggie).to eq(false)
+    end
+
+    it 'add a topping to the @topping and pizza' do
+      #check if add_topping is on pizza?
+      #pizza.topping[1].name
+      pizza = Pizza.new
+      pep = Topping.new('pepperoni')
+      pizza.add_topping(pep)
+      expect(pizza.toppings[1].name).to eq('pepperoni')
     end
 
   end

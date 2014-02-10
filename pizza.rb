@@ -14,6 +14,10 @@ class Pizza
     @toppings.all? {|topping| topping.vegetarian}
   end
 
+  def add_topping(topping)
+    @toppings.push(topping)
+  end
+
 
 end
 
